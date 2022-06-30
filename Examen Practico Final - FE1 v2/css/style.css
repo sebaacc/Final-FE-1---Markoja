@@ -17,6 +17,10 @@ main {
     display: flex;
     flex-direction: column;
 }
+footer {
+    display: flex;
+}
+
 /*Clases:*/
 
 /* Areas ordenadas horizontalmente*/
@@ -41,3 +45,19 @@ main {
 .titulo {
     font-weight: 700;
 }
+/* Párrafos Oscuros*/
+.areaPrincipal p, .articulo1 p {
+    color: black;
+}
+/*Párrafos Grises*/
+.articulo2 p, .areaFinal p {
+    color: #B9B9C1;
+
+}
+
+.boxesTestimonios{
+    display: flex;
+}
+
+
+/* recordar hay 3 botones, start, boton lista, start-blanco.*/
