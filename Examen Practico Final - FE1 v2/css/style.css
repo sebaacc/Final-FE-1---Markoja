@@ -1,6 +1,6 @@
-* {
+/* {
     outline: 1px solid red;
-}
+}*/
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
@@ -11,37 +11,57 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 80px;
 }
 main {
     display: flex;
     flex-direction: column;
 }
-aside, aside div {
+
+summary {
+    margin-left: 20px;
+}
+aside {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #F3613C;
+    align-items: center;
+    padding: 0 130px 0 220px;
 }
 footer {
     display: flex;
     justify-content: space-around;
     background-color: #1E1E26;
+    padding: 60px;
+    
 }
 
-/*-----------------------------------------------------Clases-----------------------------------------------------*/
+/*-------------------------------------------Clases------------------------------------------------*/
 
 /* Areas ordenadas horizontalmente*/
 .areaPrincipal, .areaMedia{
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.seccion1 {
+    margin-left: 100px;
 }
 /*area ordenada en columna*/
 .areaFinal {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    align-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
-
+.areaFinal div {
+    margin-top: 60px;
+}
 
 .menu {
     display: flex;
@@ -68,19 +88,12 @@ footer {
 
 .boxesTestimonios{
     display: flex;
-}
 
-.botonStart {
-    display: flex;
-    background-color: #F3603B;
-    width: 134px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    
 }
-
-/* recordar hay 3 botones, start, boton lista, start-blanco.*/
+.boxesTestimonios img {
+    width: 70px;
+    height: 70px;
+}
 
 .footerBox1, .footerBox2, .footerBox3, .footerBox4 {
     display: flex;
@@ -88,20 +101,108 @@ footer {
     justify-content: space-between;
 }
 
+.buscador {
+    display: flex;
+    justify-content: space-between;
+}
 
+/*------------------------------------------Botones------------------------------------------*/
+.botonStart {
+    display: flex;
+    background-color: #F3603B;
+    width: 134px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 13.18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.botonLista {
+    display: flex;
+    background-color: #F3603B;
+    width: 69px;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
 
+.botonStartBlanco {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 134px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 13.18px;
+    font-weight: 500;
+    color: #F3603B;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
 
-/*-----------------------------------------------------Fuentes y tamaños-----------------------------------------------------*/
+.barraSearch {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 201px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 13.18px;
+    font-weight: 500;
+    color: #A0A0A0;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.botonSearch {
+    display: flex;
+    background-color: #F3603B;
+    width: 63px;
+    height: 42px;
+    margin-left: 10px;
+
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 13.18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.copyright p {
+    display: flex;
+    justify-content: flex-end ;
+    font-weight: 500;
+    font-size: 12px;
+    align-items: center;
+    color: #8C8C94;
+}
+/*--------------------------------------Fuentes y tamaños------------------------------------------*/
 .titulo {
     font-weight: 700;
 }
 h1 {
     font-size: 58px;
     color: #232C50;
+    margin-top: 0px;
 }
 h2 {
+    margin-top: 0px;
     font-size: 36px;
     color: #232C50;
+}
+h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h5 {
+    margin-top: 14px;
 }
 .areaFinal h3 {
     font-size: 40px;
@@ -126,11 +227,33 @@ p {
     color: #B9B9C1;
 
 }
-.menu {
+
+
+
+
+/*no puedo poner de color blanco el logo .svg de la pagina en el footer<-------------------------*/
+.footerBox1 .redSocial {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.footerBox1 {
+    margin-left: 90px;
+}
+
+
+.menu a {
     font-size: 13px;
     font-weight: 500;
     color: #242E52;
 }
+.menuFooter a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
 /*para quitar subrayado a los hipervinculos con pseudo clases*/
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
