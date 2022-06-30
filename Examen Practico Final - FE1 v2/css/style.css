@@ -1,0 +1,43 @@
+* {
+    outline: 1px solid red;
+}
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+ul {
+    list-style: none;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+/*Clases:*/
+
+/* Areas ordenadas horizontalmente*/
+.areaPrincipal, .areaMedia{
+    display: flex;
+    flex-direction: row;
+}
+/*area ordenada en columna*/
+.areaFinal {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu {
+    display: flex;
+    padding: 16px;
+}
+.menu li {
+    margin: 16px;
+}
+.titulo {
+    font-weight: 700;
+}
