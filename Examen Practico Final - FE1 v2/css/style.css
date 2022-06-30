@@ -17,11 +17,18 @@ main {
     display: flex;
     flex-direction: column;
 }
+aside, aside div {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F3613C;
+}
 footer {
     display: flex;
+    justify-content: space-around;
+    background-color: #1E1E26;
 }
 
-/*Clases:*/
+/*-----------------------------------------------------Clases-----------------------------------------------------*/
 
 /* Areas ordenadas horizontalmente*/
 .areaPrincipal, .areaMedia{
@@ -32,6 +39,7 @@ footer {
 .areaFinal {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 
@@ -42,22 +50,89 @@ footer {
 .menu li {
     margin: 16px;
 }
-.titulo {
-    font-weight: 700;
-}
-/* Párrafos Oscuros*/
-.areaPrincipal p, .articulo1 p {
-    color: black;
-}
-/*Párrafos Grises*/
-.articulo2 p, .areaFinal p {
-    color: #B9B9C1;
 
+
+.articulo2 {
+    display: flex;
+    flex-direction: column;
+}
+.articulo2 section {
+    display: flex;
+}
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .boxesTestimonios{
     display: flex;
 }
 
+.botonStart {
+    display: flex;
+    background-color: #F3603B;
+    width: 134px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    
+}
 
 /* recordar hay 3 botones, start, boton lista, start-blanco.*/
+
+.footerBox1, .footerBox2, .footerBox3, .footerBox4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+/*-----------------------------------------------------Fuentes y tamaños-----------------------------------------------------*/
+.titulo {
+    font-weight: 700;
+}
+h1 {
+    font-size: 58px;
+    color: #232C50;
+}
+h2 {
+    font-size: 36px;
+    color: #232C50;
+}
+.areaFinal h3 {
+    font-size: 40px;
+    color: #242E53;
+}
+aside h3 {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+/* Párrafos Oscuros*/
+p {
+    font-size: 16px;
+    font-weight: 500;
+}
+.areaPrincipal p, .articulo1 p {
+    color: black;
+}
+
+/*Párrafos Grises*/
+.articulo2 p, .areaFinal p {
+    color: #B9B9C1;
+
+}
+.menu {
+    font-size: 13px;
+    font-weight: 500;
+    color: #242E52;
+}
+/*para quitar subrayado a los hipervinculos con pseudo clases*/
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
