@@ -1,6 +1,7 @@
-/* {
-    outline: 1px solid red;
-}*/
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
@@ -21,6 +22,13 @@ main {
 
 summary {
     margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+summary .titulo, summary p{
+    display: flex;
+    flex-direction: column;
 }
 aside {
     display: flex;
@@ -34,22 +42,27 @@ footer {
     justify-content: space-around;
     background-color: #1E1E26;
     padding: 60px;
-    
 }
 
 /*-------------------------------------------Clases------------------------------------------------*/
+.areaPrincipal, .areaMedia, .areaFinal {
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-right: 100px;
+}
 
-/* Areas ordenadas horizontalmente*/
 .areaPrincipal, .areaMedia{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 50px;
 }
-.seccion1 {
-    margin-left: 100px;
+.seccion1, .articulo1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    justify-content: space-around;
 }
-/*area ordenada en columna*/
+
 .areaFinal {
     display: flex;
     flex-direction: column;
@@ -71,6 +84,10 @@ footer {
     margin: 16px;
 }
 
+.articulo1{
+    display: flex;
+    justify-content: flex-start;   
+}
 
 .articulo2 {
     display: flex;
@@ -83,7 +100,6 @@ footer {
 .beneficios {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .boxesTestimonios{
@@ -94,11 +110,20 @@ footer {
     width: 70px;
     height: 70px;
 }
+.boxesTestimonios p{
+    width: 410px;
+    height: 78px;
+    margin: 20px;
+}
 
 .footerBox1, .footerBox2, .footerBox3, .footerBox4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+}
+.footerBox2 .menuFooter a li, .footerBox3 .menuFooter a li  {
+    margin-bottom:  1rem ;
 }
 
 .buscador {
@@ -119,6 +144,7 @@ footer {
     font-weight: 500;
     color: #FFFFFF;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    
 }
 .botonLista {
     display: flex;
@@ -166,6 +192,7 @@ footer {
     width: 63px;
     height: 42px;
     margin-left: 10px;
+    border-style: none;
 
     align-items: center;
     justify-content: center;
@@ -218,6 +245,9 @@ p {
     font-size: 16px;
     font-weight: 500;
 }
+.areaMedia p {
+    padding-top: 1rem;
+}
 .areaPrincipal p, .articulo1 p {
     color: black;
 }
@@ -253,6 +283,28 @@ p {
     font-weight: 400;
     color: #FFFFFF;
 }
+
+
+/*----------------------Background de la página y hovers botones----------------------*/
+body{
+    background-image: url(../imagenes/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: right -145px top -250px;
+}
+
+.botonStart:hover, .botonSearch:hover {
+    background-color: #F3603B;
+    opacity: 0.8;
+    box-shadow: 0px 4px 25px #F3603B;
+    transition: 0.7s;
+}
+.botonStartBlanco:hover{
+    background-color: #ffffff;
+    color: #ffa692;
+    box-shadow: 0px 4px 25px #c7c7c7c2;
+    transition: 0.7s;
+}
+
 
 /*para quitar subrayado a los hipervinculos con pseudo clases*/
 a:link { text-decoration: none; }
