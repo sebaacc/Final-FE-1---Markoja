@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    /* outline: 1px solid red; */
 }
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -12,8 +13,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+    margin: 4vh 0;
 }
 main {
     display: flex;
@@ -45,9 +45,12 @@ footer {
 }
 
 /*-------------------------------------------Clases------------------------------------------------*/
+.hamburguesaMenu {
+    display: none;
+}
 .areaPrincipal, .areaMedia, .areaFinal {
     margin-left: 7vw;
-    margin-top: 3vh;
+    margin-top: 3vh;    
     margin-right: 7vw;
 }
 
@@ -61,6 +64,9 @@ footer {
     flex-direction: column;
     margin-left: 4vw;
     justify-content: space-around;
+    
+    
+    
 }
 .seccionGraficos img {
     width: auto;
@@ -72,12 +78,11 @@ footer {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    align-content: space-between;
     margin-top: 9vh;
     margin-bottom: 9vh;
 }
 .areaFinal div {
-    margin-top: 6vhpx;
+    margin-top: 6vh;
 }
 
 .menu {
@@ -97,6 +102,7 @@ footer {
 .articulo2 {
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
 }
 .articulo2 section {
     display: flex;
@@ -109,7 +115,6 @@ footer {
 
 .boxesTestimonios{
     display: flex;
-
 }
 .boxesTestimonios img {
     height: 8vh;
@@ -124,7 +129,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 .footerBox2 .menuFooter a li, .footerBox3 .menuFooter a li  {
     margin-bottom:  1rem ;
@@ -210,18 +214,18 @@ footer {
     display: flex;
     justify-content: flex-end ;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     align-items: center;
     color: #8C8C94;
 }
-/*--------------------------------------Fuentes y tamaños------------------------------------------*/
+/*--------------------------------------Fuentes y tamaÃ±os------------------------------------------*/
 .titulo {
     font-weight: 700;
 }
 h1 {
     font-size: 3.6rem;
     color: #232C50;
-    margin-top: 0px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
 }
@@ -246,9 +250,9 @@ aside h3 {
     color: #FFFFFF;
 }
 
-/* Párrafos Oscuros*/
+/* PÃ¡rrafos Oscuros*/
 p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
 .areaMedia p {
@@ -258,7 +262,7 @@ p {
     color: black;
 }
 
-/*Párrafos Grises*/
+/*PÃ¡rrafos Grises*/
 .articulo2 p, .areaFinal p {
     color: #B9B9C1;
 
@@ -274,28 +278,23 @@ p {
     color: #FFFFFF;
 }
 
-.footerBox1 {
-    margin-left: 90px;
-}
-
-
 .menu a {
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 500;
     color: #242E52;
 }
 .menuFooter a{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: #FFFFFF;
 }
 
 
-/*----------------------Background de la página y hovers botones----------------------*/
+/*----------------------Background de la pÃ¡gina y hovers botones----------------------*/
 body{
     background-image: url(../imagenes/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    background-position: right -145px top -250px;
+    background-position: 50vw -18vh;
 }
 
 .menu li:hover {
@@ -329,41 +328,72 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 
-@media (max-width:376px) {
-/*header*/
-    nav .botonStart, .menu {
-        display: none;
-    }
 
+
+/*Media Query para diseño responsive, dispositivos pequeños */
+@media (max-width:376px) {
+/* fuentes y tamaños */
+    p, .areaMedia p {
+        font-size: 0.8rem;
+    }
+/*header*/
+     nav .botonStart, .menu {
+        display: none;
+    } 
+    .hamburguesaMenu {
+        display: initial;
+    }
 /*main*/
-    .areaPrincipal, .areaMedia, .areaFinal {
+    .areaPrincipal {
         flex-direction: column-reverse;
     }
+    .areaMedia, .areaFinal {
+        flex-direction: column;
+        margin-top: 25vh;
+    }
     .seccionGraficos img {
-        width: 325px;
+        width: 345px;
         height: auto;
     }
-    .seccion1 {
+
+    .seccion1, .articulo1 {
         text-align: center;
         align-items: center;
-        align-content: space-around;
-    }
-    h1 {
-        font-size: 2.2rem;
-    }
-    .boxesTestimonios {
-        display: none;
+        height: 20rem;
     }
 
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    /*
+    .boxesTestimonios {
+        
+    }
+*/
     aside {
-        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 16vh 7vw 16vh 12vw;
     }
 
 /*footer*/
-    footer {
-        display: none;
+    .footerBox1 {
+        flex-direction: column-reverse;
+        height: 40vh;
+        justify-content: space-evenly;
     }
-
-
-
+    footer {
+    flex-direction: column-reverse;
+    position: relative; /*esto lo hago para poder mover el .copyright al fondo de la caja */
+    }
+    .barraSearch {
+        margin-bottom: 60px;
+    }
+    .copyright {
+        bottom: 0;
+        position: absolute;
+        margin-bottom: 2rem;
+    }
 }
