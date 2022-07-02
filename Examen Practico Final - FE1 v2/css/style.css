@@ -218,7 +218,7 @@ footer {
     align-items: center;
     color: #8C8C94;
 }
-/*--------------------------------------Fuentes y tamaÃ±os------------------------------------------*/
+/*--------------------------------------Fuentes y tamanos------------------------------------------*/
 .titulo {
     font-weight: 700;
 }
@@ -250,7 +250,7 @@ aside h3 {
     color: #FFFFFF;
 }
 
-/* PÃ¡rrafos Oscuros*/
+/* Parrafos Oscuros*/
 p {
     font-size: 1rem;
     font-weight: 500;
@@ -262,16 +262,12 @@ p {
     color: black;
 }
 
-/*PÃ¡rrafos Grises*/
+/*Parrafos Grises*/
 .articulo2 p, .areaFinal p {
     color: #B9B9C1;
 
 }
 
-
-
-
-/*no puedo poner de color blanco el logo .svg de la pagina en el footer<-------------------------*/
 .footerBox1 .redSocial {
     display: flex;
     justify-content: space-between;
@@ -290,7 +286,7 @@ p {
 }
 
 
-/*----------------------Background de la pÃ¡gina y hovers botones----------------------*/
+/*----------------------Background de la pagina y hovers botones----------------------*/
 body{
     background-image: url(../imagenes/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
@@ -335,7 +331,7 @@ a:active { text-decoration: none; }
 
 /*Media Query para diseño responsive, dispositivos pequeños */
 @media (max-width:376px) {
-/* fuentes y tamaños */
+/* tamaño de letra */
     p, .areaMedia p {
         font-size: 0.8rem;
     }
@@ -433,7 +429,7 @@ a:active { text-decoration: none; }
     }
     footer {
     flex-direction: column-reverse;
-    position: relative; /*esto lo hago para poder mover el .copyright al fondo de la caja */
+    position: relative; /*para poder mover el .copyright al fondo de la caja */
     }
     .barraSearch {
         margin-bottom: 60px;
